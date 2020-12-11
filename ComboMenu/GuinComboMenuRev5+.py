@@ -5,7 +5,7 @@ beverageSelected=False
 friesSelected=False
 kelpShakeSelected=False
 print("Welcome to Good Burger")
-
+            #Printing the Menu
 print('''
                             Galley Grab
     Krabby Patty        1.25       Krabby Meal      3.50
@@ -30,20 +30,19 @@ print('''
 
 
 ''')
-
+                    #Asking the user what they want to eat using if then eilf statments
 while True:
     sandwhich= input ("Please pick a sandwhich, Krabby Patty for 1.25(k), Double(d) for 2.00, or Triple(t) for 3.00 ")
     print(sandwhich)
     if sandwhich == "k":
         total+=1.25
-
         sandwhichSelected=True
     elif sandwhich=="d":
         total+= 2.00
         sandwhichSelected=True
     elif sandwhich=="t":
         total+=3.00
-
+        #cheese asking the user if they want cheese 
     chesse=input("Would you like to add sea Cheese, y or n")
     if (chesse=="y"):
         total+= .25
@@ -53,7 +52,7 @@ while True:
         beverageSelected=True
         beverage=input("s fpr 1.oo, m for 1.25, 1 for 1.50, ")
     print("you said", beverage,"drink" ) #print (string,string,string,string)
-
+        #asking the user if they want a s,m,l beverage 
     if beverage== "s":
         total+=1.00
     elif beverage=="m":
@@ -94,7 +93,7 @@ while True:
     #Letting the User Add or Remove 
     
     #Need Sub Total
-
+                #Formatting sandwhich drink and fries and packets and tax and subtotal 
     tax=total*.7
     subTotal=total 
     total=tax+subTotal
