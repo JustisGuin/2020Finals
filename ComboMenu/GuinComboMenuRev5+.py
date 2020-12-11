@@ -50,7 +50,7 @@ while True:
     beverage=input ("Would u like a SeaFoam Soda, y or n ")
     if (beverage=="y"): 
         beverageSelected=True
-        beverage=input("s fpr 1.oo, m for 1.25, 1 for 1.50, ")
+        beverage=input("s for 1.oo, m for 1.25, 1 for 1.50, ")
     print("you said", beverage,"drink" ) #print (string,string,string,string)
         #asking the user if they want a s,m,l beverage 
     if beverage== "s":
