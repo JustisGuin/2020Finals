@@ -6,7 +6,7 @@ friesSelected=False
 kelpShakeSelected=False
 print("Welcome to Good Burger")
             #Printing the Menu
-print('''
+menu=('''
                             Galley Grab
     Krabby Patty        1.25       Krabby Meal      3.50
         w/sea cheese    1.50       Double Krabby M  3.75 
@@ -30,20 +30,29 @@ print('''
 
 
 ''')
+menuList=[]
+print(menu)
+ui=3
+
                     #Asking the user what they want to eat using if then eilf statments
-while True:
-    sandwhich= input ("Please pick a sandwhich, Krabby Patty for 1.25(k), Double(d) for 2.00, or Triple(t) for 3.00 ")
+while True: 
+    
+    sandwhich=str(input ("Please pick a sandwhich, Krabby Patty for 1.25(k), Double(d) for 2.00, or Triple(t) for 3.00 "))
     print(sandwhich)
     if sandwhich == "k":
-        total+=1.25
-        sandwhichSelected=True
+            total+=1.25
+            sandwhichSelected=True
     elif sandwhich=="d":
-        total+= 2.00
-        sandwhichSelected=True
+            total+= 2.00
+            sandwhichSelected=True
     elif sandwhich=="t":
-        total+=3.00
+            total+=3.00
+    
+    
+    
+    
         #cheese asking the user if they want cheese 
-    chesse=input("Would you like to add sea Cheese, y or n")
+    chesse=input("Would you like to add sea Cheese, y or n ")
     if (chesse=="y"):
         total+= .25
         sandwhichSelected=True
@@ -63,7 +72,7 @@ while True:
     fries=input("Would you like some Coral Bits, y or n " )
     if (fries== "y"):
         friesSelected=True
-        fries=input("Would u like a s for a $1 , m for $1.25, or l for $1.50")
+        fries=input("Would u like a s for a $1 , m for $1.25, or l for $1.50 ")
 
 
     if (fries=="s"):
@@ -76,7 +85,7 @@ while True:
     kelpShake=input("Would you like a Kelp Shake, y or n ")
     if (kelpShake== "y"):
         kelpShakeSelected=True
-        fries=input("Would u like a Regular Skake(r) for 2")
+        fries=input("Would u like a Regular Skake(r) for 2 ")
 
     if (kelpShake=="r"):
         total=total+2   
@@ -109,7 +118,8 @@ while True:
     For a total of ${6}
     '''.format(sandwhich,beverage,fries,ketchup,tax,subTotal,total))
     print('${:,.2f}'.format(total)) #string formatting      #Final Amount 
-    
+    print(menu)
+    break
 
     
     #print(total) 
